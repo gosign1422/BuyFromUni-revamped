@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1DB954;
+  --primary-dark: #1aa34a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #1DB954;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+#app {
+  width: 100%;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-spotify-green text-spotify-black px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-80 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-spotify-green text-spotify-green px-6 py-3 rounded-full font-semibold text-base hover:bg-spotify-green hover:text-spotify-black transition-colors;
+  }
+}
