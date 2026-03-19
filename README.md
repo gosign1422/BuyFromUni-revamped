@@ -1,5 +1,21 @@
-# Vue 3 + TypeScript + Vite
+# 📱 BUYFROMUNI.COM
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+BuyFromUni.com is a free, simple, and transparent housing platform for UPES students, with direct WhatsApp contact—no logins, no commissions.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](images/1.png)
+
+### 👀 Accomodations Page
+![Accommodations](images/2.png)
+
+### 🔐 Exchange Page
+![Exchange Page](images/3.png)
+
+### ⚙️ About Page
+![About](images/4.png)
+
+---
