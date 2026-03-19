@@ -32,6 +32,529 @@ export interface Property {
 
 export const properties: Property[] = [
   {
+    id: 'acc-64',
+    title: 'Property 64',
+    description: 'Modern, fully furnished apartment perfect for Students. Located in Pondha, close to Kandoli Campus.',
+    location: 'Pondha, Dehradun',
+    price: '50,000',
+    distance: '2.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/4_nd9diz.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/4_nd9diz.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/5_n0bkzv.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/2_qqtwbx.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/1_cb89fc.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773634181/6_na70ng.jpg',
+        alt: 'Hostel room'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'TV', 'AC', 'WiFi', 'Cleaning Service', 'Lift', 'Microwave', 'Induction', 'Parking', 'Fridge'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat-3BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Large Cupboard, 1 Study Table',
+        '1 Attached Washroom per room(with Geyser)',
+        'Attached Balcony with each room',
+      ]
+    }
+  },
+  {
+    id: 'acc-61',
+    title: 'Property 61',
+    description: 'Modern, fully furnished apartment perfect for Students. Located near Maggie Point, close to Bidholi Campus.',
+    location: 'Bidholi, Dehradun',
+    price: '30,000',
+    distance: '0.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563182/1_nxcgud.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563182/1_nxcgud.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563179/2_wxq95h.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563179/3_qm8k91.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563178/4_g04de5.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773563178/5_wpdi7w.jpg',
+        alt: 'Hostel room'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'TV', 'AC', 'WiFi', 'Cleaning Service', 'Lift', 'Microwave', 'Induction', 'Parking', 'Fridge'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Penthouse-1BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Large Cupboard, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom per room(with Geyser)',
+        'Open Balcony with swing',
+      ]
+    }
+  },
+  {
+    id: 'acc-53',
+    title: 'Property 53',
+    description: 'Modern, fully furnished apartment perfect for Girls. Located near Sai Mandir, close to Bidholi Campus.',
+    location: 'Bidholi, Dehradun',
+    price: '20,000',
+    distance: '1.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772445069/5_fvihir.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772445069/5_fvihir.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444672/2_o2qeaw.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444672/1_dub1ym.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772445069/4_pkpjvb.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444672/3_wzdxcq.jpg',
+        alt: 'Hostel room'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'TV', 'AC', 'WiFi', 'Cleaning Service', 'Lift', 'Gas Stove', 'Parking', 'Fridge'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 1BHK',
+      gender: 'Girls',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Large Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom per room(with Geyser)',
+        'Fully Equipped Kitchen + RO Purifier',
+      ]
+    }
+  },
+  {
+    id: 'acc-54',
+    title: 'Property 54',
+    description: 'Modern, fully furnished apartment perfect for students. Located close to Bidholi Campus.',
+    location: 'Bidholi, Dehradun',
+    price: '20,000',
+    distance: '0.2 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444688/1_fxjlmm.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444688/1_fxjlmm.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444688/2_uujthk.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444687/3_pfugh8.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444687/4_anqeyi.jpg',
+        alt: 'Hostel room'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'TV', 'AC', 'WiFi', 'Cleaning Service', 'Lift', 'Gas Stove', 'Parking', 'Fridge'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 1BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Large Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom per room(with Geyser)',
+        'Fully Equipped Kitchen + RO Purifier',
+      ]
+    }
+  },
+  {
+    id: 'acc-52',
+    title: 'Property 52',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '16,000',
+    distance: '0.5 km',
+    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/1_b67h33.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/1_b67h33.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805791/3_ogway2.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/2_d2rkgr.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805792/4_ovtenx.jpg',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Studio Apartment',
+      gender: 'Girls',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom',
+        'Fully Equipped Kitchen + RO Purifier',
+
+      ]
+    }
+  },
+  {
+    id: 'acc-62',
+    title: 'Property 62',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '60,000',
+    distance: '0.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567928/6_connzt.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567928/6_connzt.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567923/3_ibytcj.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567919/1_wghfo4.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567921/2_k6ar6e.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567927/5_rhibw2.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-6',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567925/4_chx232.jpg',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat-3BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom',
+        'Fully Equipped Kitchen + RO Purifier',
+
+      ]
+    }
+  },
+  {
+    id: 'acc-51',
+    title: 'Property 51',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '24,000',
+    distance: '0.5 km',
+    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805764/1_t8nblo.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805764/1_t8nblo.jpg',
+        alt: 'Hostel exterior'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'AC', 'TV', 'Fridge', 'Gas Cylinder', 'Oven', 'Sofa Set'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Studio Apartment',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf, 1 Attached Washroom',
+        'Common Area - Drawing & Sofa Set',
+        'Fully Equipped Kitchen with Oven, Gas Cylinder & Fridge',
+        'Entertainment - Smart TV'
+      ]
+    }
+  },
+  {
+    id: 'acc-50',
+    title: 'Property 50',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '50,000',
+    distance: '1 km',
+    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/2_zpmai8.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/2_zpmai8.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805746/4_lx4yh7.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/1_y3ac2l.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805745/3_odhw8v.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805747/5_rafpi2.jpg',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: [
+      'Furnished',
+      '55" Smart TV',
+      'AC in each room',
+      'Fully automatic washing machine',
+      'WiFi',
+      'PS4',
+      'Pool Table',
+      'Maid Service',
+      '24/7 Water',
+      'Gas stove and Cylinder',
+      'RGB lights',
+      'Modular Kitchen',
+      'Sofa sets',
+      'Balcony',
+      'Table Tennis'
+    ],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom per room',
+        'Common Area - Drawing & Sofa Set',
+        'Fully Equipped Modular Kitchen + RO Purifier',
+        'Entertainment - 55" Smart TV, PS4, Pool Table, Table Tennis',
+        'Modern Amenities - RGB Lights, Fully Automatic Washing Machine',
+        'Balcony with City View'
+      ]
+    }
+  },
+  {
+    id: 'acc-63',
+    title: 'Property 63',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '80,000',
+    distance: '0.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567928/6_connzt.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567928/6_connzt.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567923/3_ibytcj.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567919/1_wghfo4.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567921/2_k6ar6e.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567927/5_rhibw2.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-6',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773567925/4_chx232.jpg',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat-4BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom',
+      ]
+    }
+  },
+  {
+    id: 'acc-9',
+    title: 'Property 7',
+    description: 'Modern, fully furnished apartment perfect for students. Located close to KandoliCampus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Pondha, Dehradun',
+    price: '35,000',
+    distance: '3 km',
+    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677961/3_qvdhok.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677961/3_qvdhok.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677967/2_boye80.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677963/4_lbpedy.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677959/6_dtowe4.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677964/5_swlaof.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-6',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677965/1_w1nmuw.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-7',
+        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677960/7_ygbvi7.jpg',
+        alt: 'Hostel exterior'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'AC', 'Cleaning Service', 'Washing Machine', 'TV'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
+      gender: 'Co-ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 Almirah',
+        '1 Attached Washroom(with Geyser)',
+        'Fully Equipped Kitchen + RO Purifier',
+        'Drawing & Sofa Set',
+      ]
+    }
+  },
+  {
     id: 'acc-1',
     title: 'KK Residency Boys Hostel',
     description: 'Located near UPES Bidholi campus, KK Residency is known for its exceptional food quality, which is a top priority for the owner. With a focus on hygiene, nutrition, and home-style meals, KK Residency ensures that students feel cared for and well-fed throughout their stay.',
@@ -144,7 +667,7 @@ export const properties: Property[] = [
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748008725/6_jq86n3.jpg',
         alt: 'Hostel room'
       },
-      
+
       {
         id: 'img-6',
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748008725/8_clomuj.jpg',
@@ -176,7 +699,7 @@ export const properties: Property[] = [
     details: {
       type: 'Hostel-Boys',
       gender: 'Boys',
-      roomTypes: ['Single','Double','Triple'],
+      roomTypes: ['Single', 'Double', 'Triple'],
       features: [
         'Well Furnished Rooms',
         'Delicious and Hygienic Food',
@@ -221,7 +744,7 @@ export const properties: Property[] = [
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748700791/Agrasen_Mansion_Boys_Hostel_Pic_3_cich1r.jpg',
         alt: 'Hostel room'
       },
-      
+
       {
         id: 'img-6',
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748700791/Agrasen_Mansion_Boys_Hostel_Pic_19_o0x3sc.jpg',
@@ -268,7 +791,7 @@ export const properties: Property[] = [
     details: {
       type: 'Hostel-Boys',
       gender: 'Boys',
-      roomTypes: ['Double','Triple'],
+      roomTypes: ['Double', 'Triple'],
       features: [
         'Twin Sharing Rooms',
         'Proper Air-ventilated Spacious Rooms',
@@ -318,7 +841,7 @@ export const properties: Property[] = [
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748703199/6_yp5dkc.jpg',
         alt: 'Hostel room'
       },
-      
+
       {
         id: 'img-6',
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748703199/2_puxskz.jpg',
@@ -349,7 +872,7 @@ export const properties: Property[] = [
     details: {
       type: 'Hostel-Girls',
       gender: 'Girls',
-      roomTypes: ['Double','Triple'],
+      roomTypes: ['Double', 'Triple'],
       features: [
         'Spacious Rooms with Balconies',
         '24×7 Security with CCTV Surveillance',
@@ -368,7 +891,7 @@ export const properties: Property[] = [
     }
   },
   {
-    id: 'acc-5',  
+    id: 'acc-5',
     title: 'People Tree Boys Hostel',
     description: "People Tree Hostel is a professionally managed boys' hostel offering a secure and structured environment tailored for students. Established by Brigadier V. Nautiyal (Retd), it features modern double occupancy rooms with amenities such as Wi-Fi, power backup, and laundry services. The hostel provides hygienic vegetarian and non-vegetarian meals, with food charges included in the rent. To support a balanced lifestyle, it includes sports facilities like a football ground, basketball court, cricket nets, and badminton courts—promoting both academic focus and recreation.",
     location: 'Upper Kandoli, Dehradun',
@@ -401,7 +924,7 @@ export const properties: Property[] = [
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748848594/1_wjmmtb.jpg',
         alt: 'Hostel room'
       },
-      
+
       {
         id: 'img-6',
         url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1748848593/3_i3q5wj.jpg',
@@ -440,7 +963,7 @@ export const properties: Property[] = [
     details: {
       type: 'Hostel-Boys',
       gender: 'Boys',
-      roomTypes: ['Double','Triple'],
+      roomTypes: ['Double', 'Triple'],
       features: [
         'Spacious Rooms with Study Tables & Chairs',
         'Full-Size Almirahs in Each Room',
@@ -452,6 +975,58 @@ export const properties: Property[] = [
         'Sports Facilities (Cricket, Football, Basketball, Badminton)',
         'Indoor Games (Table Tennis, Carrom)',
         'Medical Tie-ups with Reputed Hospitals'
+      ]
+    }
+  },
+  {
+    id: 'acc-55',
+    title: 'Property 55',
+    description: 'Modern, fully furnished flat perfect for students. Located close to Kandoli Campus.',
+    location: 'Kandoli, Dehradun',
+    price: '40,000',
+    distance: '1.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444717/1_l6lszf.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444717/1_l6lszf.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444717/2_zhgk5p.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444716/3_sucifk.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444716/4_s84az2.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1772444715/6_hahruk.jpg',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction', 'TV', 'AC', 'Fridge', 'Lift'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 Bed, 1 AC, 1 Large Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom per room(with Geyser)',
+        'Common Area - Drawing & Sofa Set',
+        'Fully Equipped Kitchen + RO Purifier',
       ]
     }
   },
@@ -500,7 +1075,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','TV','AC','WiFi','Cleaning Service','Lift','Gas Stove','Parking','Fridge'],
+    amenities: ['Furnished', '24/7 Water', 'TV', 'AC', 'WiFi', 'Cleaning Service', 'Lift', 'Gas Stove', 'Parking', 'Fridge'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -547,7 +1122,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Power Backup', 'CCTV Security',  'Parking','Food included'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Power Backup', 'CCTV Security', 'Parking', 'Food included'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -603,7 +1178,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', 'AC','Washing Machine','24/7 Water','TV','Fridge', 'Geyser', 'Cleaning Service', 'Kitchen'],
+    amenities: ['Furnished', 'AC', 'Washing Machine', '24/7 Water', 'TV', 'Fridge', 'Geyser', 'Cleaning Service', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -613,80 +1188,19 @@ export const properties: Property[] = [
       gender: 'Co-ed',
       roomTypes: [''],
       features: [
-          'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf', 
+        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
         '1 Attached Washroom(with Geyser)',
         'Common Area - Drawing & Sofa Set',
-        'Fully Equipped Kitchen + RO Purifier', 
-             ]
-    }
-  },
-  {
-    id: 'acc-9',
-    title: 'Property 7',
-    description: 'Modern, fully furnished apartment perfect for students. Located close to KandoliCampus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Pondha, Dehradun',
-    price: '35,000',
-    distance: '3 km',
-    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677961/3_qvdhok.jpg',
-    images: [
-      {
-        id: 'img-1',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677961/3_qvdhok.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-2',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677967/2_boye80.jpg',
-        alt: 'Hostel common area'
-      },
-      {
-        id: 'img-3',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677963/4_lbpedy.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-4',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677959/6_dtowe4.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-5',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677964/5_swlaof.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-6',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677965/1_w1nmuw.jpg',
-        alt: 'Hostel common area'
-      },
-      {
-        id: 'img-7',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739677960/7_ygbvi7.jpg',
-        alt: 'Hostel exterior'
-      },
-    ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'AC', 'Cleaning Service','Washing Machine','TV'],
-    contact: {
-      name: 'Mr. Gulshan Gaur',
-      phone: '9369995438',
-    },
-    details: {
-      type: 'Flat - 2BHK',
-      gender: 'Co-ed',
-      roomTypes: [''],
-      features: [
-        'Per Room - 1 Bed, 1 Almirah',
-        '1 Attached Washroom(with Geyser)',
         'Fully Equipped Kitchen + RO Purifier',
-        'Drawing & Sofa Set',
       ]
     }
   },
+
   {
     id: 'acc-10',
-      title: 'Property 8',
-      description: 'Modern, fully furnished Apartment perfect for students. Located in between Bidholi & Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
-      location: 'Kandoli, Dehradun',
+    title: 'Property 8',
+    description: 'Modern, fully furnished Apartment perfect for students. Located in between Bidholi & Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Kandoli, Dehradun',
     price: '50,000',
     distance: '1.5 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739612699/2_m6p6bj.jpg',
@@ -722,7 +1236,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Cleaning Service', 'TV','Fridge','AC','Geyser'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'TV', 'Fridge', 'AC', 'Geyser'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -741,7 +1255,7 @@ export const properties: Property[] = [
   },
   {
     id: 'acc-11',
-      title: 'Property 9',
+    title: 'Property 9',
     description: 'Modern, fully furnished apartment perfect for students. Located close to Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
     location: 'Kandoli, Dehradun',
     price: '14,000',
@@ -769,7 +1283,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Cleaning Service','Washing Machine','Geyser'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Geyser'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -825,13 +1339,213 @@ export const properties: Property[] = [
         alt: 'Hostel room'
       },
     ],
-    amenities: ['Furnished','Wifi','24/7 Water', 'Cleaning Service','Laundry Service','Electricity included'],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Laundry Service', 'Electricity included'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
     },
     details: {
       type: 'Flat - 4BHK/3BHK/Independent Room',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 King Size Bed + 1 Almirah',
+        '1 Study Table + 1 Chair',
+        '1 Attached Washroom',
+      ]
+    }
+  },
+  {
+    id: 'acc-57',
+    title: 'Property 57',
+    description: 'Modern, fully furnished apartment perfect for students. Located next to Sai Mandir with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '30,000',
+    distance: '1 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555518/1_hyspll.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555518/1_hyspll.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555517/3_hrnvke.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555518/2_eennuz.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'video-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/video/upload/v1773555521/video_rqiucn.mp4',
+        alt: 'Hostel exterior'
+      },
+    ],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Laundry Service', 'Electricity included'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 King Size Bed + 1 Almirah',
+        '1 Study Table + 1 Chair',
+        '1 Attached Washroom',
+      ]
+    }
+  },
+  {
+    id: 'acc-58',
+    title: 'Property 58',
+    description: 'Modern, fully furnished apartment perfect for students. Located next to Sai Mandir with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '30,000',
+    distance: '1 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555534/1_mocio5.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555534/1_mocio5.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555534/3_eql7fw.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555534/2_bzmxyr.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555532/4_v8zsoe.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'video-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/video/upload/v1773555535/video_ldoqqd.mp4',
+        alt: 'Hostel common area'
+      },
+    ],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Laundry Service', 'Electricity included'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Per Room - 1 King Size Bed + 1 Almirah',
+        '1 Study Table + 1 Chair',
+        '1 Attached Washroom',
+      ]
+    }
+  },
+  {
+    id: 'acc-59',
+    title: 'Property 59',
+    description: 'Modern, fully furnished apartment perfect for students. Located next to Sai Mandir with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '14,000',
+    distance: '1 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555569/1_nxksdx.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555569/1_nxksdx.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555569/2_xgvnay.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555568/3_ybjmf3.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'video-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/video/upload/v1773555569/video_uizxyh.mp4',
+        alt: 'Hostel exterior'
+      },
+    ],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Laundry Service', 'Electricity included'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Independent Room',
+      gender: 'Co-Ed',
+      roomTypes: [''],
+      features: [
+        'Independent Rooms with Common Kitchen',
+        'Per Room - 1 King Size Bed + 1 Almirah',
+        '1 Study Table + 1 Chair',
+        '1 Attached Washroom',
+      ]
+    }
+  },
+  {
+    id: 'acc-60',
+    title: 'Property 60',
+    description: 'Modern, fully furnished apartment perfect for students. Located next to Sai Mandir with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Bidholi, Dehradun',
+    price: '30,000',
+    distance: '1.5 km',
+    imageUrl: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555599/1_rhajqf.jpg',
+    images: [
+      {
+        id: 'img-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555599/1_rhajqf.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-2',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555598/2_j3wqbb.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'img-3',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555597/3_tkwgfu.jpg',
+        alt: 'Hostel room'
+      },
+      {
+        id: 'img-4',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555595/5_qphvkq.jpg',
+        alt: 'Hostel exterior'
+      },
+      {
+        id: 'img-5',
+        url: 'https://res.cloudinary.com/dj7fyyeio/image/upload/v1773555596/4_lrcwke.jpg',
+        alt: 'Hostel common area'
+      },
+      {
+        id: 'video-1',
+        url: 'https://res.cloudinary.com/dj7fyyeio/video/upload/v1773555603/video_hiiob1.mp4',
+        alt: 'Hostel room'
+      },
+    ],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Washing Machine', 'Electricity included', '24/7 Camera Surveillance'],
+    contact: {
+      name: 'Mr. Gulshan Gaur',
+      phone: '9369995438',
+    },
+    details: {
+      type: 'Flat - 2BHK',
       gender: 'Co-Ed',
       roomTypes: [''],
       features: [
@@ -886,7 +1600,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Power Backup', 'Cleaning Service', 'CCTV Security',  'Parking','Electricity'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Power Backup', 'Cleaning Service', 'CCTV Security', 'Parking', 'Electricity'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -899,10 +1613,10 @@ export const properties: Property[] = [
         'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
         '1 Attached Washroom per room(with Geyser)',
         'Common Area - Drawing & Sofa Set',
-        'Fully Equipped Kitchen + RO Purifier', 
+        'Fully Equipped Kitchen + RO Purifier',
         '2 Common Washing Machines',
         'Terrace -  Garden View/Sitting Area',
-           ]
+      ]
     }
   },
   {
@@ -945,7 +1659,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'TV', 'Fridge','Cleaning Service','Electricity'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'TV', 'Fridge', 'Cleaning Service', 'Electricity'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -998,7 +1712,7 @@ export const properties: Property[] = [
         alt: 'Hostel common area'
       },
     ],
-    amenities: ['Furnished','Wifi','24/7 Water', 'Cleaning Service','Electricity included'],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Electricity included'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1014,7 +1728,7 @@ export const properties: Property[] = [
         'Balcony per room',
       ]
     }
-  }, 
+  },
   {
     id: 'acc-19',
     title: 'Property 19',
@@ -1050,7 +1764,7 @@ export const properties: Property[] = [
         alt: 'Hostel common area'
       },
     ],
-    amenities: ['Furnished','Wifi','24/7 Water', 'Cleaning Service','Electricity included'],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Electricity included'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1122,7 +1836,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished','WiFi', 'Cleaning Service','TV','Fridge'],
+    amenities: ['Furnished', 'WiFi', 'Cleaning Service', 'TV', 'Fridge'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1185,7 +1899,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Power Backup', 'Cleaning Service', 'CCTV Security',  'Parking','Electricity'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Power Backup', 'Cleaning Service', 'CCTV Security', 'Parking', 'Electricity'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1198,17 +1912,17 @@ export const properties: Property[] = [
         'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
         '1 Attached Washroom per room(with Geyser)',
         'Common Area - Drawing & Sofa Set',
-        'Fully Equipped Kitchen + RO Purifier', 
+        'Fully Equipped Kitchen + RO Purifier',
         '2 Common Washing Machines',
         'Terrace -  Garden View/Sitting Area',
-           ]
+      ]
     }
   },
   {
     id: 'acc-26',
-      title: 'Property 26',
-      description: 'Modern, fully furnished Apartment perfect for students. Located in between Bidholi & Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
-      location: 'Kandoli, Dehradun',
+    title: 'Property 26',
+    description: 'Modern, fully furnished Apartment perfect for students. Located in between Bidholi & Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
+    location: 'Kandoli, Dehradun',
     price: '28,000',
     distance: '1.5 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1739630353/2_s5ljhn.jpg',
@@ -1239,7 +1953,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Cleaning Service','Fridge','Geyser'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Fridge', 'Geyser'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1258,7 +1972,7 @@ export const properties: Property[] = [
   },
   {
     id: 'acc-27',
-      title: 'Property 27',
+    title: 'Property 27',
     description: 'Modern, fully furnished apartment perfect for students. Located next to Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
     location: 'Kandoli, Dehradun',
     price: '22,500',
@@ -1301,7 +2015,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Cleaning Service','Laundry Service','Kitchen','Mini Fridge'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Kitchen', 'Mini Fridge'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1319,7 +2033,7 @@ export const properties: Property[] = [
   },
   {
     id: 'acc-28',
-      title: 'Property 28',
+    title: 'Property 28',
     description: 'Modern, fully furnished apartment perfect for students. Located next to Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
     location: 'Kandoli, Dehradun',
     price: '15,000',
@@ -1352,7 +2066,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Cleaning Service','Washing Machine','Kitchen','TV','Fridge','Geyser'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Kitchen', 'TV', 'Fridge', 'Geyser'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1403,7 +2117,7 @@ export const properties: Property[] = [
         alt: 'Hostel common area'
       },
     ],
-    amenities: ['Furnished','Wifi','24/7 Water', 'Cleaning Service','Washing Machine','Electricity included'],
+    amenities: ['Furnished', 'Wifi', '24/7 Water', 'Cleaning Service', 'Washing Machine', 'Electricity included'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1451,7 +2165,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1508,7 +2222,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished','Microwave', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity(6 units free)', 'Gas Cylinder'],
+    amenities: ['Furnished', 'Microwave', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity(6 units free)', 'Gas Cylinder'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1564,7 +2278,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished','Lift', '24/7 Water','Gas Stove','WiFi','Balcony','Electricity', 'Kitchen'],
+    amenities: ['Furnished', 'Lift', '24/7 Water', 'Gas Stove', 'WiFi', 'Balcony', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1620,7 +2334,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Washing Machine', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1671,7 +2385,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', 'Induction','24/7 Water','WiFi','Cleaning Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', 'Induction', '24/7 Water', 'WiFi', 'Cleaning Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1693,7 +2407,7 @@ export const properties: Property[] = [
     description: 'Modern, fully furnished flat perfect for students. Located close to Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
     location: 'Upper Kandoli, Dehradun',
     price: '13,000',
-    distance: '1 km', 
+    distance: '1 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1742632846/3_lvdihs.jpg',
     images: [
       {
@@ -1722,7 +2436,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1767,18 +2481,18 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', 'Gas Stove','24/7 Water','WiFi','Cleaning Service', 'Washing Machine', '', 'Kitchen'],
+    amenities: ['Furnished', 'Gas Stove', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', '', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
     },
     details: {
-      type: 'Independent Room',    
+      type: 'Independent Room',
       gender: 'Co-Ed',
       roomTypes: [''],
       features: [
-        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf', 
-        '1 Attached Washroom',    
+        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
+        '1 Attached Washroom',
       ]
     }
   },
@@ -1812,7 +2526,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1857,7 +2571,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', 'TV','24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', 'TV', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1876,7 +2590,7 @@ export const properties: Property[] = [
     id: 'acc-41',
     title: 'Property 41',
     description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
+    location: 'Bidholi, Dehradun',
     price: '20,000',
     distance: '0.5 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1742632898/1_tlx9ih.jpg',
@@ -1907,7 +2621,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Kitchen'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1926,7 +2640,7 @@ export const properties: Property[] = [
     id: 'acc-45',
     title: 'Property 45',
     description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
+    location: 'Bidholi, Dehradun',
     price: '45,000',
     distance: '1 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1743846208/3_slnouw.jpg',
@@ -1967,7 +2681,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -1986,7 +2700,7 @@ export const properties: Property[] = [
     id: 'acc-46',
     title: 'Property 46',
     description: 'Modern, fully furnished flat perfect for students. Located close to Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Upper Kandoli, Dehradun',  
+    location: 'Upper Kandoli, Dehradun',
     price: '15,000',
     distance: '1.5 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746803429/3_jrbbck.jpg',
@@ -2028,13 +2742,13 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Laundry Service', 'Electricity', 'Fridge'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Laundry Service', 'Electricity', 'Fridge'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
     },
     details: {
-      type: 'Flat - 3BHK',
+      type: 'Independent Room',
       gender: 'Co-Ed',
       roomTypes: [''],
       features: [
@@ -2047,7 +2761,7 @@ export const properties: Property[] = [
     id: 'acc-47',
     title: 'Property 47',
     description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
+    location: 'Bidholi, Dehradun',
     price: '40,000',
     distance: '0.5 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805683/2_vlmtad.jpg',
@@ -2088,7 +2802,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -2107,7 +2821,7 @@ export const properties: Property[] = [
     id: 'acc-48',
     title: 'Property 48',
     description: 'Modern, fully furnished flat perfect for students. Located 1km from Bidholi and Kandoli Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Upper Kandoli, Dehradun',  
+    location: 'Upper Kandoli, Dehradun',
     price: '50,000',
     distance: '1 km',
     imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805700/1_y43kxf.jpg',
@@ -2148,7 +2862,7 @@ export const properties: Property[] = [
         alt: 'Hostel exterior'
       },
     ],
-    amenities: ['Furnished', '24/7 Water','WiFi', 'Washing Machine', 'Electricity', 'Inverter','Gas Cylinder'],
+    amenities: ['Furnished', '24/7 Water', 'WiFi', 'Washing Machine', 'Electricity', 'Inverter', 'Gas Cylinder'],
     contact: {
       name: 'Mr. Gulshan Gaur',
       phone: '9369995438',
@@ -2163,152 +2877,6 @@ export const properties: Property[] = [
       ]
     }
   },
-  {
-    id: 'acc-50',
-    title: 'Property 50',
-    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
-    price: '50,000',
-    distance: '1 km',
-    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/2_zpmai8.jpg',
-    images: [
-      {
-        id: 'img-1',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/2_zpmai8.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-2',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805746/4_lx4yh7.jpg',
-        alt: 'Hostel common area'
-      },
-      {
-        id: 'img-3',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805744/1_y3ac2l.jpg',
-        alt: 'Hostel room'
-      },
-      {
-        id: 'img-4',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805745/3_odhw8v.jpg',
-        alt: 'Hostel common area'
-      },
-      {
-        id: 'img-5',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805747/5_rafpi2.jpg',
-        alt: 'Hostel common area'
-      },
-    ],
-    amenities: [
-      'Furnished',
-      '55" Smart TV',
-      'AC in each room',
-      'Fully automatic washing machine',
-      'WiFi',
-      'PS4',
-      'Pool Table',
-      'Maid Service',
-      '24/7 Water',
-      'Gas stove and Cylinder',
-      'RGB lights',
-      'Modular Kitchen',
-      'Sofa sets',
-      'Balcony',
-      'Table Tennis'
-    ],
-        contact: {
-      name: 'Mr. Gulshan Gaur',
-      phone: '9369995438',
-    },
-    details: {
-      type: 'Flat - 2BHK',
-      gender: 'Co-Ed',
-      roomTypes: [''],
-      features: [
-        'Per Room - 1 Bed, 1 AC, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
-        '1 Attached Washroom per room',
-        'Common Area - Drawing & Sofa Set',
-        'Fully Equipped Modular Kitchen + RO Purifier',
-        'Entertainment - 55" Smart TV, PS4, Pool Table, Table Tennis',
-        'Modern Amenities - RGB Lights, Fully Automatic Washing Machine',
-        'Balcony with City View'
-      ]
-    }
-  },
-  {
-    id: 'acc-51',
-    title: 'Property 51',
-    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
-    price: '24,000',
-    distance: '0.5 km',
-    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805764/1_t8nblo.jpg',
-    images: [
-      {
-        id: 'img-1',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805764/1_t8nblo.jpg',
-        alt: 'Hostel exterior'
-      },
-    ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Washing Machine', 'Electricity', 'AC', 'TV', 'Fridge', 'Gas Cylinder', 'Oven', 'Sofa Set'],
-    contact: {
-      name: 'Mr. Gulshan Gaur',
-      phone: '9369995438',
-    },
-    details: {
-      type: 'Studio Apartment',
-      gender: 'Co-Ed',
-      roomTypes: [''],
-      features: [
-        'Per Room - 1 Bed, 1 AC, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf, 1 Attached Washroom',
-        'Common Area - Drawing & Sofa Set',
-        'Fully Equipped Kitchen with Oven, Gas Cylinder & Fridge',
-        'Entertainment - Smart TV'
-      ]
-    }
-  },
-  {
-    id: 'acc-52',
-    title: 'Property 52',
-    description: 'Modern, fully furnished flat perfect for students. Located close to Bidholi Campus with a variety of Restaurants & Gym facilities nearby.',
-    location: 'Bidholi, Dehradun',  
-    price: '16,000',
-    distance: '0.5 km',
-    imageUrl: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/1_b67h33.jpg',
-    images: [
-      {
-        id: 'img-1',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/1_b67h33.jpg',
-        alt: 'Hostel exterior'
-      },
-      {
-        id: 'img-2',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805791/3_ogway2.jpg',
-        alt: 'Hostel common area'
-      },
-      {
-        id: 'img-3',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805790/2_d2rkgr.jpg',
-        alt: 'Hostel room'
-      },
-      {
-        id: 'img-4',
-        url: 'https://res.cloudinary.com/dqu8ex7bn/image/upload/v1746805792/4_ovtenx.jpg',
-        alt: 'Hostel common area'
-      },
-    ],
-    amenities: ['Furnished', '24/7 Water','WiFi','Cleaning Service', 'Washing Machine', 'Electricity', 'Induction'],
-    contact: {
-      name: 'Mr. Gulshan Gaur',
-      phone: '9369995438',
-    },
-    details: {
-      type: 'Studio Apartment',
-      gender: 'Girls',
-      roomTypes: [''],
-      features: [
-        'Per Room - 1 Bed, 1 Almirah, 1 Study Table, 1 Chair, 1 Bookshelf',
-        '1 Attached Washroom',
-      ]
-    }
-  },
+
+
 ]; 

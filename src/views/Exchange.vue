@@ -1,38 +1,51 @@
 <template>
-  <div class="min-h-screen bg-spotify-black">
-    <!-- Page Header with Button -->
+  <div class="min-h-screen">
+    <div class="ambient-glow"></div>
+    
+    <!-- Page Header -->
     <div class="pt-6">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center py-6">
-          <h1 class="text-5xl md:text-6xl font-bold text-spotify-green mb-3">Exchange Hub</h1>
-          <p class="text-xl max-w-3xl mx-auto mb-6">Exchange Anything.</p>
-          <button @click="openListingForm" class="bg-spotify-green text-spotify-black px-8 py-4 rounded-full text-xl font-bold hover:bg-opacity-80 transition-colors">
-            Create Your Listing.
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center py-8 animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 text-sm text-white/60">
+            <svg class="w-4 h-4 text-spotify-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            Marketplace
+          </div>
+          
+          <h1 class="exchange-title">Exchange Hub</h1>
+          <p class="text-lg text-white/40 max-w-xl mx-auto mb-8">
+            Buy, sell, rent, or exchange anything with fellow students on campus.
+          </p>
+          <button @click="openListingForm" class="btn-glow text-lg px-10 py-4 shine-effect inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Create Your Listing
           </button>
         </div>
       </div>
     </div>
 
     <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
       <!-- How It Works Section -->
-      <div class="mb-10 pt-8 border-t border-spotify-green">
-        <h2 class="text-3xl font-bold text-spotify-green mb-4">How It Works</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div class="p-4">
-            <div class="text-4xl text-spotify-green mb-2">1</div>
-            <h3 class="text-xl font-bold mb-1">List Your Items</h3>
-            <p>Post what you have to exchange and what you're looking for.</p>
+      <div class="mb-12 pt-8">
+        <div class="divider-glow mb-8"></div>
+        <h2 class="text-2xl font-bold text-white mb-6 tracking-tight">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 stagger-children">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">List Your Items</h3>
+            <p class="step-desc">Post what you have to exchange and what you're looking for.</p>
           </div>
-          <div class="p-4">
-            <div class="text-4xl text-spotify-green mb-2">2</div>
-            <h3 class="text-xl font-bold mb-1">Connect With Others</h3>
-            <p>Find someone with matching interests and reach out to them.</p>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Connect With Others</h3>
+            <p class="step-desc">Find someone with matching interests and reach out to them.</p>
           </div>
-          <div class="p-4">
-            <div class="text-4xl text-spotify-green mb-2">3</div>
-            <h3 class="text-xl font-bold mb-1">Make the Exchange</h3>
-            <p>Meet up safely on campus to complete your exchange.</p>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Make the Exchange</h3>
+            <p class="step-desc">Meet up safely on campus to complete your exchange.</p>
           </div>
         </div>
       </div>
@@ -46,10 +59,10 @@
     </div>
 
     <!-- Modal Form -->
-    <div v-if="showListingForm" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80">
-      <div class="bg-spotify-black border border-spotify-green p-8 rounded-lg max-w-xl w-full mx-4 max-h-90vh overflow-y-auto">
+    <div v-if="showListingForm" class="fixed inset-0 flex items-center justify-center z-50 bg-black/80 backdrop-blur-sm">
+      <div class="bg-[#111] border border-white/[0.08] p-8 rounded-2xl max-w-xl w-full mx-4 max-h-90vh overflow-y-auto shadow-2xl">
         <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold text-spotify-green">Create Your Listing</h2>
+          <h2 class="text-xl font-bold text-white">Create Your Listing</h2>
           <button @click="closeListingForm" class="text-white hover:text-spotify-green">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -65,14 +78,14 @@
         <form @submit.prevent="submitListing">
           <!-- Question 1: Listing Type -->
           <div class="mb-6">
-            <label class="block text-spotify-green font-bold mb-2">Q1: What type of listing is this? <span class="text-red-500">*</span></label>
+            <label class="block text-white/50 font-semibold text-sm mb-2">Q1: What type of listing is this? <span class="text-red-400">*</span></label>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
               <div 
                 v-for="option in listingTypes" 
                 :key="option" 
                 @click="formData.listingType = option"
-                class="cursor-pointer p-3 border rounded-lg text-center transition-colors"
-                :class="formData.listingType === option ? 'border-spotify-green bg-spotify-green bg-opacity-20 text-white' : 'border-gray-700 text-gray-300 hover:border-spotify-green'"
+                class="cursor-pointer p-3 border rounded-xl text-center text-sm transition-all"
+                :class="formData.listingType === option ? 'border-spotify-green bg-spotify-green/10 text-white' : 'border-white/[0.08] text-white/50 hover:border-white/20'"
               >
                 {{ option }}
               </div>
@@ -82,14 +95,14 @@
 
           <!-- Question 2: Location -->
           <div class="mb-6">
-            <label class="block text-spotify-green font-bold mb-2">Q2: What's your location? <span class="text-red-500">*</span></label>
+            <label class="block text-white/50 font-semibold text-sm mb-2">Q2: What's your location? <span class="text-red-400">*</span></label>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
               <div 
                 v-for="location in locations" 
                 :key="location" 
                 @click="formData.location = location"
-                class="cursor-pointer p-3 border rounded-lg text-center transition-colors"
-                :class="formData.location === location ? 'border-spotify-green bg-spotify-green bg-opacity-20 text-white' : 'border-gray-700 text-gray-300 hover:border-spotify-green'"
+                class="cursor-pointer p-3 border rounded-xl text-center text-sm transition-all"
+                :class="formData.location === location ? 'border-spotify-green bg-spotify-green/10 text-white' : 'border-white/[0.08] text-white/50 hover:border-white/20'"
               >
                 {{ location }}
               </div>
@@ -99,12 +112,12 @@
 
           <!-- Question 3: Description -->
           <div class="mb-6">
-            <label for="description" class="block text-spotify-green font-bold mb-2">Q3: Describe what you're listing <span class="text-red-500">*</span></label>
+            <label for="description" class="block text-white/50 font-semibold text-sm mb-2">Q3: Describe what you're listing <span class="text-red-400">*</span></label>
             <textarea 
               id="description" 
               v-model="formData.description"
               rows="4" 
-              class="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:border-spotify-green focus:outline-none"
+              class="w-full bg-[#0a0a0a] border border-white/[0.08] rounded-xl p-3 text-white text-sm focus:border-spotify-green focus:outline-none focus:ring-1 focus:ring-spotify-green/20 transition-all"
               placeholder="Describe your item, its condition, and what you're looking for in return..."
               required
             ></textarea>
@@ -113,14 +126,14 @@
 
           <!-- Question 4: Contact Information -->
           <div class="mb-6">
-            <label class="block text-spotify-green font-bold mb-2">Q4: How can people contact you? <span class="text-red-500">*</span></label>
+            <label class="block text-white/50 font-semibold text-sm mb-2">Q4: How can people contact you? <span class="text-red-400">*</span></label>
             
             <!-- Contact Method Selection -->
             <div class="grid grid-cols-2 gap-3 mb-4">
               <div 
                 @click="selectContactMethod('whatsapp')"
-                class="cursor-pointer p-3 border rounded-lg text-center transition-colors flex items-center justify-center"
-                :class="formData.contactMethod === 'whatsapp' ? 'border-spotify-green bg-spotify-green bg-opacity-20 text-white' : 'border-gray-700 text-gray-300 hover:border-spotify-green'"
+                class="cursor-pointer p-3 border rounded-xl text-center text-sm transition-all flex items-center justify-center"
+                :class="formData.contactMethod === 'whatsapp' ? 'border-spotify-green bg-spotify-green/10 text-white' : 'border-white/[0.08] text-white/50 hover:border-white/20'"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -129,8 +142,8 @@
               </div>
               <div 
                 @click="selectContactMethod('instagram')"
-                class="cursor-pointer p-3 border rounded-lg text-center transition-colors flex items-center justify-center"
-                :class="formData.contactMethod === 'instagram' ? 'border-spotify-green bg-spotify-green bg-opacity-20 text-white' : 'border-gray-700 text-gray-300 hover:border-spotify-green'"
+                class="cursor-pointer p-3 border rounded-xl text-center text-sm transition-all flex items-center justify-center"
+                :class="formData.contactMethod === 'instagram' ? 'border-spotify-green bg-spotify-green/10 text-white' : 'border-white/[0.08] text-white/50 hover:border-white/20'"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -144,7 +157,7 @@
               <input 
                 v-model="formData.contact"
                 type="text" 
-                class="w-full bg-black border border-gray-700 rounded-lg p-3 text-white focus:border-spotify-green focus:outline-none"
+                class="w-full bg-[#0a0a0a] border border-white/[0.08] rounded-xl p-3 text-white text-sm focus:border-spotify-green focus:outline-none focus:ring-1 focus:ring-spotify-green/20 transition-all"
                 placeholder="Enter your WhatsApp number (with country code)"
                 required
               />
@@ -154,11 +167,11 @@
             <!-- Instagram Username Input -->
             <div v-if="formData.contactMethod === 'instagram'" class="mb-2">
               <div class="flex items-center">
-                <span class="text-gray-400 p-3 border-l border-t border-b border-gray-700 rounded-l-lg bg-black">instagram.com/</span>
+                <span class="text-white/30 p-3 border-l border-t border-b border-white/[0.08] rounded-l-xl bg-[#0a0a0a] text-sm">instagram.com/</span>
                 <input 
                   v-model="formData.contact"
                   type="text" 
-                  class="w-full bg-black border border-gray-700 rounded-r-lg p-3 text-white focus:border-spotify-green focus:outline-none border-l-0"
+                  class="w-full bg-[#0a0a0a] border border-white/[0.08] rounded-r-xl p-3 text-white text-sm focus:border-spotify-green focus:outline-none focus:ring-1 focus:ring-spotify-green/20 transition-all border-l-0"
                   placeholder="your_username"
                   required
                 />
@@ -172,8 +185,8 @@
 
           <!-- Question 5: Images -->
           <div class="mb-8">
-            <label class="block text-spotify-green font-bold mb-2">Q5: Upload images <span class="text-red-500">*</span></label>
-            <div class="border border-dashed border-gray-700 rounded-lg p-4 text-center hover:border-spotify-green transition-colors cursor-pointer" @click="triggerFileInput">
+            <label class="block text-white/50 font-semibold text-sm mb-2">Q5: Upload images <span class="text-red-400">*</span></label>
+            <div class="border border-dashed border-white/[0.1] rounded-xl p-6 text-center hover:border-spotify-green/30 transition-all cursor-pointer" @click="triggerFileInput">
               <input
                 type="file"
                 ref="fileInput"
@@ -215,20 +228,20 @@
 
           <!-- Upload Progress -->
           <div v-if="isSubmitting && uploadProgress > 0" class="mb-6">
-            <div class="w-full bg-gray-800 rounded-full h-4 overflow-hidden">
+            <div class="w-full bg-white/[0.05] rounded-full h-2 overflow-hidden">
               <div 
-                class="bg-spotify-green h-full transition-all duration-300"
+                class="bg-spotify-green h-full transition-all duration-300 rounded-full"
                 :style="{ width: `${uploadProgress}%` }"
               ></div>
             </div>
-            <p class="text-xs text-gray-400 text-center mt-1">Uploading images: {{ uploadProgress }}%</p>
+            <p class="text-xs text-white/30 text-center mt-2">Uploading images: {{ uploadProgress }}%</p>
           </div>
 
           <!-- Submit Button -->
           <div class="text-center">
             <button 
               type="submit" 
-              class="bg-spotify-green text-spotify-black px-8 py-3 rounded-full text-lg font-bold hover:bg-opacity-80 transition-colors w-full"
+              class="btn-glow w-full text-base py-3.5"
               :disabled="isSubmitting"
             >
               {{ isSubmitting ? 'Submitting...' : 'Post Your Listing' }}
@@ -667,5 +680,66 @@ onMounted(async () => {
 <style scoped>
 .max-h-90vh {
   max-height: 90vh;
+}
+
+.exchange-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #1DB954 0%, #1ed760 50%, #a3f7bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.step-card {
+  background: var(--surface-2, #111111);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-card:hover {
+  border-color: rgba(29, 185, 84, 0.15);
+  background: var(--surface-3, #181818);
+  transform: translateY(-2px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(29, 185, 84, 0.1);
+  border: 1px solid rgba(29, 185, 84, 0.15);
+  color: #1DB954;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.5;
+}
+
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(29, 185, 84, 0.15), transparent);
 }
 </style> 

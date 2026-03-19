@@ -107,28 +107,13 @@
         </div>
       </div>
 
-      <!-- Reviews Section -->
-      <div class="mt-16 space-y-8">
-        <ReviewComponent 
-          productId="accommodation-product1" 
-          productType="accommodation" 
-          ref="reviewComponentRef"
-        />
-        
-        <ReviewForm 
-          productId="accommodation-product1" 
-          productType="accommodation" 
-          @review-submitted="handleReviewSubmitted"
-        />
-      </div>
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ReviewComponent from '../../../components/ReviewComponent.vue'
-import ReviewForm from '../../../components/ReviewForm.vue'
 
 const property = {
   title: 'Property 2',
@@ -193,7 +178,7 @@ const property = {
 }
 
 const linkCopied = ref(false)
-const reviewComponentRef = ref<InstanceType<typeof ReviewComponent> | null>(null)
+
 
 const copyProductLink = async () => {
   try {
@@ -213,12 +198,7 @@ const openGallery = (index: number) => {
   // Implementation of gallery modal would go here
 }
 
-const handleReviewSubmitted = () => {
-  // Refresh reviews when a new review is submitted
-  if (reviewComponentRef.value) {
-    reviewComponentRef.value.fetchReviews()
-  }
-}
+
 
 // Update page metadata
 document.title = `${property.title} - BuyFromUni`

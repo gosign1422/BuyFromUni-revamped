@@ -1,35 +1,52 @@
 <template>
-  <div class="min-h-screen bg-spotify-black py-8">
-    <div class="max-w-7xl mx-auto px-4">
-      <h1 class="text-3xl font-bold text-white mb-8">Accommodations</h1>
+  <div class="min-h-screen">
+    <div class="ambient-glow"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <!-- Page Header -->
+      <div class="mb-8 animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-4 text-sm text-white/60">
+          <svg class="w-4 h-4 text-spotify-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Accommodations
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Find Your Next Home</h1>
+        <div class="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-spotify-green/10 to-yellow-500/5 border border-spotify-green/20">
+          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          <span class="text-sm font-semibold text-spotify-green">#1 Accommodation Platform for UPES</span>
+          <span class="text-xs text-white/30">·</span>
+          <span class="text-xs text-white/40">50+ properties sold · 100+ satisfied customers</span>
+        </div>
+      </div>
       
       <!-- Filters Section -->
-      <div class="mb-8 p-4 bg-black rounded-lg border border-gray-800">
+      <div class="mb-8 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
-            <label class="block text-white text-sm font-medium mb-2">Location</label>
-            <select v-model="filters.location" class="w-full bg-black text-white px-4 py-2 rounded-md border border-spotify-green focus:outline-none focus:ring-2 focus:ring-spotify-green">
+            <label class="block text-xs font-medium text-white/40 uppercase tracking-wider mb-2">Location</label>
+            <select v-model="filters.location" class="select-glass w-full">
               <option v-for="option in locationOptions" :key="option" :value="option">
                 {{ option ? option : 'All Locations' }}
               </option>
             </select>
           </div>
           <div>
-            <label class="block text-white text-sm font-medium mb-2">Property Type</label>
-            <select v-model="filters.type" class="w-full bg-black text-white px-4 py-2 rounded-md border border-spotify-green focus:outline-none focus:ring-2 focus:ring-spotify-green">
+            <label class="block text-xs font-medium text-white/40 uppercase tracking-wider mb-2">Property Type</label>
+            <select v-model="filters.type" class="select-glass w-full">
               <option v-for="option in propertyTypeOptions" :key="option" :value="option">
                 {{ option ? option : 'All Types' }}
               </option>
             </select>
           </div>
           <div>
-            <label class="block text-white text-sm font-medium mb-2">Monthly Price Range</label>
+            <label class="block text-xs font-medium text-white/40 uppercase tracking-wider mb-2">Monthly Price</label>
             <select
               v-model="filters.priceRange"
-              :class="[
-                'w-full bg-black text-white px-4 py-2 rounded-md border border-spotify-green focus:outline-none focus:ring-2 focus:ring-spotify-green',
-                filters.type === 'Hostel' ? 'bg-gray-800 text-gray-400 cursor-not-allowed' : ''
-              ]"
+              class="select-glass w-full"
+              :class="{ 'opacity-40 cursor-not-allowed': filters.type === 'Hostel' }"
               :disabled="filters.type === 'Hostel'"
             >
               <option v-for="option in priceRangeOptions" :key="option.value" :value="option.value">
@@ -38,7 +55,7 @@
             </select>
           </div>
           <div class="flex items-end">
-            <button @click="resetFilters" class="w-full bg-opacity-10 bg-spotify-green text-white px-4 py-2 rounded-md hover:bg-opacity-20 transition-colors border-2 border-spotify-green">
+            <button @click="resetFilters" class="btn-outline-glow w-full text-sm py-2.5">
               Reset Filters
             </button>
           </div>
@@ -47,65 +64,69 @@
       
       <!-- Active Filters -->
       <div v-if="hasActiveFilters" class="mb-4 flex flex-wrap gap-2">
-        <div v-if="filters.location" class="amenity-tag flex items-center">
+        <div v-if="filters.location" class="badge-glass">
           Location: {{ filters.location }}
-          <button @click="filters.location = ''" class="ml-2 text-xs">✕</button>
+          <button @click="filters.location = ''" class="ml-1 text-white/40 hover:text-white">✕</button>
         </div>
-        <div v-if="filters.type" class="amenity-tag flex items-center">
+        <div v-if="filters.type" class="badge-glass">
           Type: {{ filters.type }}
-          <button @click="filters.type = ''" class="ml-2 text-xs">✕</button>
+          <button @click="filters.type = ''" class="ml-1 text-white/40 hover:text-white">✕</button>
         </div>
-        <div v-if="filters.priceRange" class="amenity-tag flex items-center">
+        <div v-if="filters.priceRange" class="badge-glass">
           Price: {{ getPriceRangeLabel(filters.priceRange) }}
-          <button @click="filters.priceRange = ''" class="ml-2 text-xs">✕</button>
+          <button @click="filters.priceRange = ''" class="ml-1 text-white/40 hover:text-white">✕</button>
         </div>
       </div>
       
-      <div v-if="loading" class="flex justify-center py-12">
-        <div class="text-spotify-green">Loading accommodations...</div>
+      <!-- Loading -->
+      <div v-if="loading" class="flex justify-center py-16">
+        <div class="animate-spin rounded-full h-10 w-10 border-2 border-spotify-green border-t-transparent"></div>
       </div>
       
-      <div v-else-if="filteredProperties.length === 0" class="text-white text-center py-12">
-        No properties found matching your criteria. Try adjusting your filters.
+      <!-- No Results -->
+      <div v-else-if="filteredProperties.length === 0" class="text-center py-16">
+        <p class="text-white/40 text-lg">No properties found matching your criteria.</p>
+        <p class="text-white/25 text-sm mt-2">Try adjusting your filters.</p>
       </div>
       
       <!-- Results Count -->
-      <div v-else-if="!loading" class="mb-4 text-white">
+      <div v-else-if="!loading" class="mb-5 text-sm text-white/35">
         Showing {{ filteredProperties.length }} of {{ properties.length }} properties
       </div>
       
-      <div v-if="!loading && filteredProperties.length > 0" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Properties Grid -->
+      <div v-if="!loading && filteredProperties.length > 0" class="grid grid-cols-1 md:grid-cols-3 gap-5 stagger-children">
         <div
           v-for="property in filteredProperties"
           :key="property.id"
-          class="property-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 border"
+          class="surface-card overflow-hidden group"
         >
           <router-link :to="`/accommodations/${slugify(property.title)}`">
-            <div class="relative aspect-video">
+            <div class="relative aspect-video overflow-hidden">
               <img
                 :src="property.imageUrl"
                 :alt="property.title"
-                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div class="absolute top-2 right-2 bg-spotify-green text-white px-2 py-1 rounded-full text-sm">
+              <div class="absolute top-3 right-3 badge-glass text-xs">
                 {{ property.details.type }}
               </div>
             </div>
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-white">{{ property.title }}</h3>
-              <p class="text-white text-opacity-70 mt-2">{{ property.location }}</p>
-              <p class="text-white text-opacity-70 mt-1">Distance: {{ property.distance }}</p>
-              <div class="flex items-center mt-4">
-                <span class="text-spotify-green font-bold text-2xl">₹{{ property.price.includes('/year') ? property.price : `${property.price}/month` }}</span>
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-white mb-1 tracking-tight">{{ property.title }}</h3>
+              <p class="text-sm text-white/40 mb-1">{{ property.location }}</p>
+              <p class="text-xs text-white/30 mb-3">{{ property.distance }}</p>
+              <div class="flex items-baseline gap-1">
+                <span class="text-spotify-green font-bold text-xl">₹{{ property.price.includes('/year') ? property.price : `${property.price}/month` }}</span>
               </div>
             </div>
           </router-link>
           
           <!-- Share Button -->
-          <div class="px-4 pb-2 flex justify-center border-t border-gray-800 mt-2 pt-2">
+          <div class="px-5 pb-4 flex justify-center border-t border-white/[0.04] pt-3">
             <button 
               @click="shareProperty(property)"
-              class="text-spotify-green hover:text-white transition-colors flex items-center space-x-1 text-sm"
+              class="text-white/30 hover:text-spotify-green transition-colors flex items-center gap-1.5 text-sm"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -268,35 +289,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Custom styles for consistent colors */
-.property-card {
-  background-color: #000000;
-  border-color: rgba(29, 185, 84, 0.5); /* spotify-green with opacity */
-}
-
-.amenity-tag {
-  background-color: rgba(29, 185, 84, 0.1);
-  color: #1DB954;
-  border-radius: 9999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-/* Override any remaining gray colors */
-:deep(.text-gray-400) {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-
-:deep(.bg-gray-900) {
-  background-color: #000000 !important;
-}
-
-:deep(.bg-gray-800) {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-}
-
-:deep(.border-gray-800) {
-  border-color: rgba(255, 255, 255, 0.1) !important;
-}
+/* Scoped overrides removed — now using global design system classes */
 </style>

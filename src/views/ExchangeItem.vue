@@ -1,8 +1,9 @@
 <template>
-  <div class="min-h-screen bg-spotify-black">
+  <div class="min-h-screen">
+    <div class="ambient-glow"></div>
     <!-- Loading State -->
     <div v-if="loading" class="flex justify-center items-center min-h-[70vh]">
-      <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-spotify-green"></div>
+      <div class="animate-spin rounded-full h-10 w-10 border-2 border-spotify-green border-t-transparent"></div>
     </div>
     
     <!-- Error State -->
@@ -23,7 +24,7 @@
     <div v-else-if="exchange" class="container mx-auto px-4 py-8">
       <!-- Back button -->
       <div class="mb-6">
-        <router-link to="/exchange" class="text-spotify-green hover:text-white inline-flex items-center transition-colors">
+        <router-link to="/exchange" class="text-white/40 hover:text-spotify-green inline-flex items-center transition-colors text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
@@ -31,7 +32,7 @@
         </router-link>
       </div>
       
-      <div class="bg-spotify-black border border-spotify-green rounded-lg overflow-hidden max-w-5xl mx-auto">
+      <div class="bg-[#111] border border-white/[0.06] rounded-2xl overflow-hidden max-w-5xl mx-auto">
         <!-- Image Gallery -->
         <div class="image-gallery">
           <!-- Main Large Image -->

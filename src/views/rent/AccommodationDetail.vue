@@ -205,70 +205,7 @@
         </div>
       </div>
 
-      <!-- Reviews Section -->
-      <div v-if="property" class="mt-16 space-y-8">
-        <div class="bg-zinc-900 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-white mb-6">Reviews</h2>
-          <ReviewComponent 
-            :productId="property.id" 
-            productType="accommodation" 
-            ref="reviewComponentRef"
-          />
-        </div>
-        
-        <div class="bg-zinc-900 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-white mb-6">Write a Review</h2>
-          <div class="space-y-6">
-            <!-- Name Input -->
-            <div>
-              <label for="reviewName" class="block text-white mb-2">Your Name</label>
-              <input 
-                type="text" 
-                id="reviewName" 
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-spotify-green"
-                v-model="reviewName"
-                placeholder="Enter your name"
-              />
-            </div>
-            
-            <!-- Rating Input -->
-            <div>
-              <label class="block text-white mb-2">Rating</label>
-              <div class="flex space-x-2">
-                <button 
-                  v-for="star in 5" 
-                  :key="star" 
-                  @click="reviewRating = star"
-                  class="text-2xl focus:outline-none"
-                  :class="star <= reviewRating ? 'text-spotify-green' : 'text-zinc-600'"
-                >
-                  ★
-                </button>
-              </div>
-            </div>
-            
-            <!-- Review Text Input -->
-            <div>
-              <label for="reviewText" class="block text-white mb-2">Your Review</label>
-              <textarea 
-                id="reviewText" 
-                rows="5" 
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-spotify-green"
-                v-model="reviewText"
-                placeholder="Share your experience with this accommodation"
-              ></textarea>
-            </div>
-            
-            <button 
-              @click="submitReview" 
-              class="bg-spotify-green text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors"
-              :disabled="isSubmitting"
-            >
-              {{ isSubmitting ? 'Submitting...' : 'Submit Review' }}
-            </button>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
@@ -277,19 +214,12 @@
 import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { properties } from '../../data/accommodations'
-import ReviewComponent from '../../components/ReviewComponent.vue'
-import { supabase } from '../../lib/supabase'
+
 
 const route = useRoute()
 const loading = ref(true)
 const linkCopied = ref(false)
-const reviewComponentRef = ref<InstanceType<typeof ReviewComponent> | null>(null)
 
-// Review form state
-const reviewName = ref('')
-const reviewRating = ref(0)
-const reviewText = ref('')
-const isSubmitting = ref(false)
 
 // Add this slugify function
 function slugify(text: string): string {
@@ -349,73 +279,13 @@ const copyProductLink = async () => {
   }
 }
 
-const handleReviewSubmitted = () => {
-  // Refresh reviews when a new review is submitted
-  if (reviewComponentRef.value) {
-    reviewComponentRef.value.fetchReviews()
-  }
-  
-  // Reset form
-  reviewName.value = ''
-  reviewRating.value = 0
-  reviewText.value = ''
-}
 
-const submitReview = async () => {
-  if (!reviewName.value || reviewRating.value === 0 || !reviewText.value) {
-    // Show validation error
-    alert('Please fill out all fields')
-    return
-  }
-  
-  // Make sure property exists
-  if (!property.value) {
-    console.error('Property not found')
-    alert('Error: Property not found')
-    return
-  }
-  
-  isSubmitting.value = true
-  
-  try {
-    // Create a new review object and insert into Supabase
-    const { error } = await supabase
-      .from('reviews')
-      .insert([
-        {
-          product_id: property.value.id,
-          product_type: 'accommodation',
-          user_name: reviewName.value,
-          rating: reviewRating.value,
-          comment: reviewText.value
-        }
-      ])
-    
-    if (error) throw error
-    
-    // Update UI
-    handleReviewSubmitted()
-  } catch (error: any) {
-    console.error('Error saving review:', error)
-    alert('There was an error submitting your review. Please try again later.')
-  } finally {
-    isSubmitting.value = false
-  }
-}
 
 onMounted(() => {
   // Scroll to top of page
   window.scrollTo(0, 0)
   
-  // Test Supabase connection
-  supabase.from('reviews').select('count', { count: 'exact', head: true })
-    .then(({ count, error }) => {
-      if (error) {
-        console.error('Supabase connection error:', error)
-      } else {
-        console.log('Supabase connection successful. Total reviews:', count)
-      }
-    })
+
   
   // Simulate loading
   setTimeout(() => {

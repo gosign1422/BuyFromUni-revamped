@@ -29,17 +29,7 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/About.vue')
     },
-    {
-      path: '/exchange',
-      name: 'exchange',
-      component: () => import('../views/Exchange.vue')
-    },
-    {
-      path: '/exchange/:id',
-      name: 'exchange-detail',
-      component: () => import('../views/Exchange.vue'),
-      props: true
-    },
+
     {
       path: '/privacy-policy',
       name: 'privacy-policy',

@@ -1,13 +1,13 @@
 <template>
-  <div class="mb-12 pt-4 border-t border-spotify-green">
-    <div class="flex justify-between items-center mb-8">
-      <h2 class="text-4xl font-bold text-spotify-green tracking-tight">Active Listings</h2>
+  <div class="mb-12 pt-4">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+      <h2 class="text-2xl font-bold text-white tracking-tight">Active Listings</h2>
       
       <!-- Filters -->
-      <div class="flex space-x-3">
+      <div class="flex gap-3">
         <select 
           v-model="typeFilter" 
-          class="select-metallic rounded-lg px-4 py-2 text-white text-sm focus:outline-none"
+          class="select-glass"
         >
           <option value="">All Types</option>
           <option v-for="type in listingTypes" :key="type" :value="type">{{ type }}</option>
@@ -15,7 +15,7 @@
         
         <select 
           v-model="locationFilter" 
-          class="select-metallic rounded-lg px-4 py-2 text-white text-sm focus:outline-none"
+          class="select-glass"
         >
           <option value="">All Locations</option>
           <option v-for="location in locations" :key="location" :value="location">{{ location }}</option>
@@ -24,13 +24,19 @@
     </div>
     
     <!-- Loading State -->
-    <div v-if="isLoading" class="flex justify-center py-12">
-      <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-spotify-green"></div>
+    <div v-if="isLoading" class="flex justify-center py-16">
+      <div class="animate-spin rounded-full h-10 w-10 border-2 border-spotify-green border-t-transparent"></div>
     </div>
     
     <!-- No Listings State -->
-    <div v-else-if="filteredListings.length === 0" class="py-12 text-center">
-      <p class="text-gray-400 text-lg">No listings found. Be the first to create one!</p>
+    <div v-else-if="filteredListings.length === 0" class="py-16 text-center">
+      <div class="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center mx-auto mb-5">
+        <svg class="w-7 h-7 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+        </svg>
+      </div>
+      <p class="text-white/40 text-lg font-medium mb-1">No listings found</p>
+      <p class="text-white/25 text-sm">Be the first to create one!</p>
     </div>
     
     <!-- Listings Grid -->
@@ -38,7 +44,7 @@
       <div 
         v-for="listing in filteredListings" 
         :key="listing.id" 
-        class="card-metallic rounded-lg overflow-hidden cursor-pointer hover-metallic"
+        class="surface-card overflow-hidden cursor-pointer"
         @click="openListingDetails(listing)"
       >
         <!-- Listing Image -->
@@ -56,7 +62,7 @@
           </div>
           
           <!-- Badge -->
-          <div class="absolute top-2 left-2 badge-metallic text-spotify-green px-3 py-1 rounded-full text-xs font-bold">
+          <div class="absolute top-3 left-3 badge-glass px-3 py-1 text-xs">
             {{ listing.listing_type }}
           </div>
         </div>
@@ -64,7 +70,7 @@
         <!-- Listing Content -->
         <div class="p-5">
           <div class="flex justify-between items-start mb-3">
-            <span class="badge-metallic text-spotify-green px-3 py-1 rounded-full text-xs font-medium">
+            <span class="badge-glass text-xs">
               {{ listing.location }}
             </span>
             <span class="text-xs text-gray-400">
